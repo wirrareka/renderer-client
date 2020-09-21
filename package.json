@@ -1,6 +1,6 @@
 {
   "name": "renderer-client",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "license": "LicenseRef-LICENSE",
   "description": "Document Rendering JS Client",
   "repository": {
@@ -16,6 +16,7 @@
   },
   "main": "build/index.js",
   "types": "build/index.d.ts",
+  "type": "module",
   "scripts": {
     "build": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
