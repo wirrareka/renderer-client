@@ -1,4 +1,3 @@
-"use strict";
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
     function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
     return new (P || (P = Promise))(function (resolve, reject) {
@@ -35,11 +34,7 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
         if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
     }
 };
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-var axios_1 = __importDefault(require("axios"));
+import Axios from 'axios';
 var environment = process.env.NODE_ENV || 'development';
 var DefaultURL = environment === 'production' ? 'https://renderer.quanto.sk' : 'http://localhost:4000';
 var RendererClient = /** @class */ (function () {
@@ -152,7 +147,7 @@ var RendererClient = /** @class */ (function () {
                 });
             });
         };
-        this.axios = axios_1.default.create({
+        this.axios = Axios.create({
             baseURL: url + "/api",
             headers: {
                 authorization: "Bearer " + token
@@ -161,4 +156,5 @@ var RendererClient = /** @class */ (function () {
     }
     return RendererClient;
 }());
-exports.RendererClient = RendererClient;
+export { RendererClient };
+//# sourceMappingURL=index.js.map
